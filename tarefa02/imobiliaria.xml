@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE imobiliaria [
+<!ELEMENT imobiliaria (imovel+)>
+<!ELEMENT imovel (descricao, proprietario, endereco, caracteristicas, valor)>
+<!ELEMENT proprietario (nome, (email | telefone)*)>
+<!ELEMENT endereco (rua, bairro, cidade, numero?)>
+<!ELEMENT caracteristicas (numBanheiros, numQuartos, tamanho)>
+
+<!ELEMENT descricao (#PCDATA)>
+<!ELEMENT valor (#PCDATA)>
+
+<!ELEMENT numBanheiros (#PCDATA)>
+<!ELEMENT numQuartos (#PCDATA)>
+<!ELEMENT tamanho (#PCDATA)>
+
+<!ELEMENT rua (#PCDATA)>
+<!ELEMENT bairro (#PCDATA)>
+<!ELEMENT cidade (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT telefone (#PCDATA)>
+
+
+<!ATTLIST imovel ID CDATA #REQUIRED>
+<!ENTITY moeda "R$">
+<!ENTITY m "m²">
+]>
+
+<imobiliaria>
+    <imovel ID="Im01">
+        <descricao>Casa simples com quintal</descricao>
+
+        <proprietario>
+            <nome>João Silva</nome>
+            <email>JSemail@gmail.com</email><!--pelo menos um -->
+            <telefone>83999990001</telefone><!-- pelo menos um -->
+        </proprietario>
+
+        <endereco>
+            <rua>Rua das Flores</rua>
+            <bairro>Centro</bairro>
+            <cidade>Campina Grande</cidade>
+            <numero>120</numero><!-- opcional e único, então a cardinalidade tem que ser 0 ou 1-->
+        </endereco>
+
+        <caracteristicas>
+            <numBanheiros>1</numBanheiros>
+            <numQuartos>2</numQuartos>
+            <tamanho>80;&m;</tamanho>
+        </caracteristicas>
+
+        <valor>&moeda;150000</valor>
+    </imovel>
+
+    <imovel ID="Im02">
+        <descricao>Apartamento pequeno</descricao>
+
+        <proprietario>
+            <nome>Maria Souza</nome>
+            <email>Marial@gmail.com</email><!--pelo menos um -->
+            <telefone>83999990002</telefone><!-- pelo menos um -->
+            <telefone>83999990012</telefone>
+        </proprietario>
+
+        <endereco>
+            <rua>Rua João Pessoa</rua>
+            <bairro>Prata</bairro>
+            <cidade>Campina Grande</cidade>
+            <numero>45</numero><!-- opcional e único, então a cardinalidade tem que ser 0 ou 1-->
+        </endereco>
+
+        <caracteristicas>
+            <numBanheiros>1</numBanheiros>
+            <numQuartos>1</numQuartos>
+            <tamanho>50;&m;</tamanho>
+        </caracteristicas>
+
+        <valor>&moeda;120000</valor>
+    </imovel>
+
+    <imovel ID="Im03">
+        <descricao>Casa ampla com garagem</descricao>
+
+        <proprietario>
+            <nome>Carlos Pereira</nome>
+            <telefone>8377770003</telefone><!-- pelo menos um -->
+            <!-- sem email -->
+        </proprietario>
+
+        <endereco>
+            <rua>Rua do Sol</rua>
+            <bairro>Catolé</bairro>
+            <cidade>Campina Grande</cidade>
+            <numero>300</numero><!-- opcional e único, então a cardinalidade tem que ser 0 ou 1-->
+        </endereco>
+
+        <caracteristicas>
+            <numBanheiros>2</numBanheiros>
+            <numQuartos>3</numQuartos>
+            <tamanho>120;&m;</tamanho>
+        </caracteristicas>
+
+        <valor>&moeda;250000</valor>
+    </imovel>
+
+
+    <imovel ID="Im04">
+        <descricao>Kitnet mobiliada</descricao>
+
+        <proprietario>
+            <nome>Ana Costa</nome>
+            <telefone>8377770004</telefone><!-- pelo menos um -->
+            <email>ana@gmail.com</email>
+        </proprietario>
+
+        <endereco>
+            <rua>Rua da paz</rua>
+            <bairro>Liberdade</bairro>
+            <cidade>Campina Grande</cidade>
+            <numero>78</numero>
+        </endereco>
+
+        <caracteristicas>
+            <numBanheiros>1</numBanheiros>
+            <numQuartos>1</numQuartos>
+            <tamanho>35;&m;</tamanho>
+        </caracteristicas>
+
+        <valor>&moeda;90000</valor>
+    </imovel>
+
+        <imovel ID="Im05">
+        <descricao>Casa duplex moderna</descricao>
+
+        <proprietario>
+            <nome>Pedro Alves</nome>
+            <telefone>8355550005</telefone><!-- pelo menos um -->
+            <email>pedro@gmail.com</email>
+        </proprietario>
+
+        <endereco>
+            <rua>Avenida Brasil</rua>
+            <bairro>Alto Branco</bairro>
+            <cidade>Campina Grande</cidade>
+            <numero>500</numero>
+        </endereco>
+
+        <caracteristicas>
+            <numBanheiros>3</numBanheiros>
+            <numQuartos>4</numQuartos>
+            <tamanho>185;&m;</tamanho>
+        </caracteristicas>
+
+        <valor>&moeda;350000</valor>
+    </imovel>
+
+</imobiliaria>
