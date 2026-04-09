@@ -1,25 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE quiz SYSTEM "quiz.dtd">
 <quiz versao="1.0"><!-- a versão é demonstrativa -->
-    <disciplina></disciplina>
+    <disciplina>Dúvidas da vida</disciplina>
 
     <professor>
-        <nome></nome>
-        <matricula></matricula>
+        <nome>Diego Ari Ligia</nome>
+        <matricula>2910004</matricula>
     </professor>
 
-    <turma></turma>
+    <turma>INFULL4P</turma>
 
-    <data></data>
+    <data>23/01/2003</data>
 
     <questoes>
         <questao>
-            <enunciado></enunciado>
-
-            <pontuaçao></pontuaçao>
-
+            <enunciado>O que significa HTML?</enunciado>
+            <pontuacao>2</pontuacao>
             <alternativas>
-                <alternativa correta="sim"></alternativa>
+                <alternativa correta="nao">Hyper Trainer Marking Language</alternativa>
+                <alternativa correta="sim">Hyper Text Markup Language</alternativa>
+                <alternativa correta="nao">High Text Machine Language</alternativa>
+                <alternativa correta="nao">Hyper Tool Multi Language</alternativa>
+            </alternativas>
+        </questao>
+
+        <questao>
+            <enunciado>Qual linguagem é usada para estilizar páginas web?</enunciado>
+            <pontuacao>2</pontuacao>
+            <alternativas>
+                <alternativa correta="nao">HTML</alternativa>
+                <alternativa correta="sim">CSS</alternativa>
+                <alternativa correta="nao">Python</alternativa>
+                <alternativa correta="nao">Java</alternativa>
+            </alternativas>
+        </questao>
+
+        <questao>
+            <enunciado>Qual destas é uma linguagem de programação?</enunciado>
+            <pontuacao>2</pontuacao>
+            <alternativas>
+                <alternativa correta="nao">CSS</alternativa>
+                <alternativa correta="nao">HTML</alternativa>
+                <alternativa correta="sim">JavaScript</alternativa>
+                <alternativa correta="nao">XML</alternativa>
+            </alternativas>
+        </questao>
+
+        <questao>
+            <enunciado>O XML é usado principalmente para:</enunciado>
+            <pontuacao>2</pontuacao>
+            <alternativas>
+                <alternativa correta="nao">Estilizar páginas</alternativa>
+                <alternativa correta="sim">Armazenar e transportar dados</alternativa>
+                <alternativa correta="nao">Criar jogos</alternativa>
+                <alternativa correta="nao">Compilar código</alternativa>
+            </alternativas>
+        </questao>
+
+        <questao>
+            <enunciado>Qual é o maior planeta do sistema solar?</enunciado>
+            <pontuacao>2</pontuacao>
+            <alternativas>
+                <alternativa correta="nao">Terra</alternativa>
+                <alternativa correta="nao">Marte</alternativa>
+                <alternativa correta="sim">Júpiter</alternativa>
+                <alternativa correta="nao">Vênus</alternativa>
             </alternativas>
         </questao>
     </questoes>

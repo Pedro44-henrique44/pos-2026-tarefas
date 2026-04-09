@@ -1,4 +1,4 @@
-<!ELEMENT quiz (disciplina, professor, turma, data, questoes)> <!-- mudei "questões" para "questoes"-->
+<!ELEMENT quiz (disciplina, professor, turma, data, questoes+)> <!-- mudei "questões" para "questoes"-->
     <!ATTLIST quiz versao CDATA #REQUIRED>
     <!ELEMENT disciplina (#PCDATA)>
     <!ELEMENT professor (nome, matricula?)>
@@ -7,9 +7,9 @@
     <!ELEMENT turma (#PCDATA)>
     <!ELEMENT data (#PCDATA)>
     <!ELEMENT questoes (questao+)>
-        <!ELEMENT questao (enunciado, pontuaçao, alternativas)> <!-- tirei os acentos circunflexos-->
-            <!ELEMENT enunciado (#PCDATA)>
-            <!ELEMENT pontuaçao (#PCDATA)>
+        <!ELEMENT questao (enunciado, pontuacao, alternativas+)> <!-- tirei os acentos circunflexos-->
+            <!ELEMENT enunciado (#PCDATA)> <!-- perdi um pouco de tempo com um erro na palavra "pontuacao". olhar atentamente as palavras!!! -->
+            <!ELEMENT pontuacao (#PCDATA)>
             <!ELEMENT alternativas (alternativa+)>
                 <!ELEMENT alternativa (#PCDATA)>
                     <!ATTLIST alternativa correta (sim|nao) #REQUIRED>
