@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<cardapio xmlns="http://cardapio.org"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        targetNamespace="cardapio.xsd"
+        xsi:schemaLocation="http://cardapio.org
+                        cardapio.xsd">
+
+    <prato ID="P01">
+        <nome_prato>Risoto</nome_prato>
+        
+        <descricao>Gostoso</descricao>
+
+        <ingredientes>macarrão e molhos</ingredientes>
+
+        <preco moeda="USD">R$39,89</preco>
+
+        <calorias>300kcal de calorias</calorias>
+        
+        <tempo_preparo>30 minutos</tempo_preparo>
+    </prato>
+
+    <prato ID="P02">
+        <nome_prato>Feijoada</nome_prato>
+        
+        <descricao>Bom nos domingos</descricao>
+
+        <ingredientes>Feijão preto, água, sal...</ingredientes>
+
+        <preco moeda="BRL">&reais;56,87</preco>
+
+        <calorias>1070kcal de calorias</calorias>
+        
+        <tempo_preparo>90 minutos</tempo_preparo>
+    </prato>
+
+    <prato ID="P03">
+        <nome_prato>Risoto Aprimorado</nome_prato>
+        
+        <descricao>Ainda mais gostoso</descricao>
+
+        <ingredientes>arroz arbóreo, caldo, queijo</ingredientes>
+
+        <preco moeda="USD">R$39,89</preco>
+
+        <calorias>300kcal de calorias</calorias>
+        
+        <tempo_preparo>30 minutos</tempo_preparo>
+    </prato>
+
+    <prato ID="P04">
+        <nome_prato>Hambúrguer</nome_prato>
+        
+        <descricao>Clássico</descricao>
+
+        <ingredientes>pão, carne, queijo, alface</ingredientes>
+
+        <preco moeda="USD">R$25,00</preco>
+
+        <calorias>550kcal de calorias</calorias>
+        
+        <tempo_preparo>20 minutos</tempo_preparo>
+    </prato>
+
+    <prato ID="P05">
+        <nome_prato>Salada Caesar</nome_prato>
+        
+        <descricao>Leve e fresca</descricao>
+
+        <ingredientes>alface, frango, croutons, molho</ingredientes>
+
+        <preco moeda="USD">R$22,50</preco>
+
+        <calorias>250kcal de calorias</calorias>
+        
+        <tempo_preparo>15 minutos</tempo_preparo>
+    </prato>
+</cardapio>
