@@ -1,6 +1,26 @@
-<schema xmlns="http://www.w3.org/2001/XMLSchema"
-        xmlns:b="http://cardapio.org"
+<xsi:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema"
+        xmlns="http://cardapio.org"
         targetNamespace="http://cardapio.org"
         elementFormDefault="qualified">
 
-</schema>
+        <xsi:element name="cardapio">
+                <xsi:complexType>
+                        <xsi:sequence>
+                                <xsi:element name="prato" maxOccurs="unbounded">
+                                        <xsi:complexType>
+                                                <xsi:sequence>
+                                                <xsi:element name="nome_prato" type="xsi:string"/>
+                                                <xsi:element name="descricao" type="xsi:string"/>
+                                                <xsi:element name="ingredientes" type="xsi:string"/>
+                                                <xsi:element name="preco" type="xsi:string"/>
+                                                <xsi:element name="calorias" type="xsi:string"/>
+                                                <xsi:element name="tempo_preparo" type="xsi:string"/>
+                                                </xsi:sequence>
+                                        <xsi:attribute name="ID" type="xsi:string" use="required"/>
+                                        </xsi:complexType>
+                                </xsi:element>
+                        </xsi:sequence>
+                </xsi:complexType>
+        </xsi:element>
+
+</xsi:schema>

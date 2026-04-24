@@ -2,9 +2,7 @@
 
 <cardapio xmlns="http://cardapio.org"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        targetNamespace="cardapio.xsd"
-        xsi:schemaLocation="http://cardapio.org
-                        cardapio.xsd">
+        xsi:schemaLocation="http://cardapio.org cardapio.xsd">
 
     <prato ID="P01">
         <nome_prato>Risoto</nome_prato>
@@ -13,7 +11,7 @@
 
         <ingredientes>macarrão e molhos</ingredientes>
 
-        <preco moeda="USD">R$39,89</preco>
+        <preco>R$39,89</preco>
 
         <calorias>300kcal de calorias</calorias>
         
@@ -27,7 +25,7 @@
 
         <ingredientes>Feijão preto, água, sal...</ingredientes>
 
-        <preco moeda="BRL">&reais;56,87</preco>
+        <preco>R$56,87</preco>
 
         <calorias>1070kcal de calorias</calorias>
         
@@ -41,7 +39,7 @@
 
         <ingredientes>arroz arbóreo, caldo, queijo</ingredientes>
 
-        <preco moeda="USD">R$39,89</preco>
+        <preco>R$39,89</preco>
 
         <calorias>300kcal de calorias</calorias>
         
@@ -55,7 +53,7 @@
 
         <ingredientes>pão, carne, queijo, alface</ingredientes>
 
-        <preco moeda="USD">R$25,00</preco>
+        <preco>R$25,00</preco>
 
         <calorias>550kcal de calorias</calorias>
         
@@ -69,7 +67,7 @@
 
         <ingredientes>alface, frango, croutons, molho</ingredientes>
 
-        <preco moeda="USD">R$22,50</preco>
+        <preco>R$22,50</preco>
 
         <calorias>250kcal de calorias</calorias>
         
