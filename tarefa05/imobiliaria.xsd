@@ -1,0 +1,57 @@
+<xsi:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema"
+        xmlns="http://imobiliaria.org"
+        targetNamespace="http://imobiliaria.org"
+        elementFormDefault="qualified">
+    <xsi:element name="imobiliaria">
+        <xsi:complexType>
+            <xsi:sequence>
+                <xsi:element name="imovel" minOccurs="1" maxOccurs="unbounded">
+                    <xsi:complexType>
+                        <xsi:sequence>
+                            <xsi:element name="descricao" type="xsi:string"/>
+                            
+                            <xsi:element name="proprietario">
+                                <xsi:complexType> <!-- utilizei o choice, somente para garantir que o proprietario tenha pelo menos 1 entre os dois-->
+                                    <xsi:sequence>
+                                        <xsi:element name="nome"/>
+                                        <xsi:choice minOccurs="1" maxOccurs="unbounded">
+                                            <xsi:element name="email" minOccurs="0"/>
+                                            <xsi:element name="telefone" minOccurs="0"/>
+                                        </xsi:choice>
+                                    </xsi:sequence>
+                                </xsi:complexType>
+
+                            </xsi:element>
+
+                            <xsi:element name="endereco">
+                                <xsi:complexType>
+                                    <xsi:sequence> <!--não entendi "que deve ser opcional" nas instrunções-->
+                                        <xsi:element name="rua" minOccurs="0"/>
+                                        <xsi:element name="bairro"  minOccurs="0"/>
+                                        <xsi:element name="cidade"  minOccurs="0"/>
+                                        <xsi:element name="numero"  minOccurs="0"/>
+                                    </xsi:sequence>
+                                </xsi:complexType>
+                            </xsi:element>
+
+                            <xsi:element name="caracteristicas">
+                                <xsi:complexType>
+                                    <xsi:sequence> <!-- invertido a sequencia (deveria ser tamanho, quarto, banheiro)-->
+                                        <xsi:element name="numBanheiros" type="xsi:integer"/>
+                                        <xsi:element name="numQuartos" type="xsi:integer"/>
+                                        <xsi:element name="tamanho" type="xsi:decimal"/>
+                                    </xsi:sequence>
+                                </xsi:complexType>
+                            </xsi:element>
+
+                            <xsi:element name="valor" type="xsi:string"/>
+                        </xsi:sequence>
+                    <xsi:attribute name="ID" type="xsi:integer" use="required" />
+                    </xsi:complexType>
+                </xsi:element>
+            </xsi:sequence>
+        </xsi:complexType>
+
+    </xsi:element>
+
+</xsi:schema>
