@@ -6,17 +6,23 @@
         <xsi:element name="cardapio">
                 <xsi:complexType>
                         <xsi:sequence>
-                                <xsi:element name="prato" maxOccurs="unbounded">
+                                <xsi:element name="prato" minOccurs="1" maxOccurs="unbounded">
                                         <xsi:complexType>
                                                 <xsi:sequence>
                                                 <xsi:element name="nome_prato" type="xsi:string"/>
                                                 <xsi:element name="descricao" type="xsi:string"/>
-                                                <xsi:element name="ingredientes" type="xsi:string"/>
-                                                <xsi:element name="preco" type="xsi:string"/>
-                                                <xsi:element name="calorias" type="xsi:string"/>
+                                                <xsi:element name="ingredientes">
+                                                        <xsi:complexType>
+                                                                <xsi:sequence>
+                                                                        <xsi:element name="ingrediente" type="xsi:string" minOccurs="1" maxOccurs="unbounded"/>
+                                                                </xsi:sequence>
+                                                        </xsi:complexType>
+                                                </xsi:element>
+                                                <xsi:element name="preco" type="xsi:decimal"/>
+                                                <xsi:element name="calorias" type="xsi:integer"/> 
                                                 <xsi:element name="tempo_preparo" type="xsi:string"/>
                                                 </xsi:sequence>
-                                        <xsi:attribute name="ID" type="xsi:string" use="required"/>
+                                        <xsi:attribute name="ID" type="xsi:integer" use="required"/>
                                         </xsi:complexType>
                                 </xsi:element>
                         </xsi:sequence>

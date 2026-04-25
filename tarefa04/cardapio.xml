@@ -4,72 +4,93 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://cardapio.org cardapio.xsd">
 
-    <prato ID="P01">
+    <prato ID="01">
         <nome_prato>Risoto</nome_prato>
         
         <descricao>Gostoso</descricao>
 
-        <ingredientes>macarrão e molhos</ingredientes>
+        <ingredientes>
+            <ingrediente>macarrão</ingrediente>
+            <ingrediente>molhos</ingrediente>
+        </ingredientes>
 
-        <preco>R$39,89</preco>
+        <preco>39.89</preco>
 
-        <calorias>300kcal de calorias</calorias>
+        <calorias>300</calorias>
         
         <tempo_preparo>30 minutos</tempo_preparo>
     </prato>
 
-    <prato ID="P02">
+    <prato ID="02">
         <nome_prato>Feijoada</nome_prato>
         
         <descricao>Bom nos domingos</descricao>
 
-        <ingredientes>Feijão preto, água, sal...</ingredientes>
+        <ingredientes>
+            <ingrediente>Feijão preto</ingrediente>
+            <ingrediente>água</ingrediente>
+            <ingrediente>sal</ingrediente>
+        </ingredientes>
 
-        <preco>R$56,87</preco>
+        <preco>56.87</preco>
 
-        <calorias>1070kcal de calorias</calorias>
+        <calorias>1070</calorias>
         
         <tempo_preparo>90 minutos</tempo_preparo>
     </prato>
 
-    <prato ID="P03">
+    <prato ID="03">
         <nome_prato>Risoto Aprimorado</nome_prato>
         
         <descricao>Ainda mais gostoso</descricao>
 
-        <ingredientes>arroz arbóreo, caldo, queijo</ingredientes>
+        <ingredientes> 
+            <ingrediente>arroz arbóreo</ingrediente>
+            <ingrediente>caldo</ingrediente>
+            <ingrediente>queijo</ingrediente>
+        </ingredientes>
 
-        <preco>R$39,89</preco>
+        <preco>39.89</preco>
 
-        <calorias>300kcal de calorias</calorias>
+        <calorias>300</calorias>
         
         <tempo_preparo>30 minutos</tempo_preparo>
     </prato>
 
-    <prato ID="P04">
+    <prato ID="04">
         <nome_prato>Hambúrguer</nome_prato>
         
         <descricao>Clássico</descricao>
 
-        <ingredientes>pão, carne, queijo, alface</ingredientes>
+        <ingredientes> 
+            <ingrediente>pão</ingrediente>
+            <ingrediente>carne</ingrediente>
+            <ingrediente>queijo</ingrediente>
+            <ingrediente>alface</ingrediente>
+        </ingredientes>
 
-        <preco>R$25,00</preco>
+        <preco>25.00</preco>
 
-        <calorias>550kcal de calorias</calorias>
+        <calorias>550</calorias>
         
         <tempo_preparo>20 minutos</tempo_preparo>
     </prato>
 
-    <prato ID="P05">
+    <prato ID="05">
         <nome_prato>Salada Caesar</nome_prato>
         
         <descricao>Leve e fresca</descricao>
 
-        <ingredientes>alface, frango, croutons, molho</ingredientes>
+        <ingredientes> 
+            <ingrediente>alface</ingrediente>
+            <ingrediente>frango</ingrediente>
+            <ingrediente>croutons</ingrediente>
+            <ingrediente>molho</ingrediente>
+        </ingredientes>
 
-        <preco>R$22,50</preco>
+        <preco>22.50</preco>
 
-        <calorias>250kcal de calorias</calorias>
+        <calorias>250</calorias>
         
         <tempo_preparo>15 minutos</tempo_preparo>
     </prato>
