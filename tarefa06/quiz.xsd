@@ -28,7 +28,15 @@
                                             <element name="alternativas" maxOccurs="unbounded">
                                                 <complexType>
                                                     <sequence>
-                                                        <element name="alternativa" maxOccurs="unbounded"/>
+                                                       <element name="alternativa" maxOccurs="unbounded">
+                                                            <complexType>
+                                                                <simpleContent>
+                                                                    <extension base="string">
+                                                                        <attribute name="correta" type="string" use="required"/>
+                                                                    </extension>
+                                                                </simpleContent>
+                                                            </complexType>
+                                                        </element>
                                                     </sequence>
                                                 </complexType>
                                             </element>
