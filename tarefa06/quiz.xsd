@@ -1,0 +1,48 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:b="http://quiz.org"
+        targetNamespace="http://quiz.org"
+        elementFormDefault="qualified">
+        <element name="quiz">
+            <complexType>
+                <sequence>
+                    <element name="disciplina"/>
+                    <element name="professor">
+                        <complexType>
+                            <sequence>
+                                <element name="nome" type="string"/>
+                                <element name="matricula"/>
+                            </sequence>
+                        </complexType>
+                    </element>
+                    <element name="turma" type="string"/>
+                    <element name="data" type="string"/> <!-- eu sei que existe o dado type=date, 
+                    mas não quero adpatar o xml. preguiça...-->
+                    <element name="questoes">
+                        <complexType>
+                            <sequence>
+                                <element name="questao" minOccurs="1" maxOccurs="unbounded">
+                                    <complexType>
+                                        <sequence>
+                                            <element name="enunciado" type="string"/>
+                                            <element name="pontuacao" type="decimal"/>
+                                            <element name="alternativas" maxOccurs="unbounded">
+                                                <complexType>
+                                                    <sequence>
+                                                        <element name="alternativa" maxOccurs="unbounded"/>
+                                                    </sequence>
+                                                </complexType>
+                                            </element>
+
+                                            
+                                        </sequence>
+                                    </complexType>
+                                </element>
+                            </sequence>
+                        </complexType>
+                    </element>
+                </sequence>
+                <attribute name="versao" type="decimal" use="required"/>
+            </complexType>
+            
+        </element>
+</schema>
