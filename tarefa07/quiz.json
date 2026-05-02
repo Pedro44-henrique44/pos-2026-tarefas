@@ -1,0 +1,136 @@
+{
+  "quiz": {
+    "versao": "1.0",
+    "disciplina": "Dúvidas da vida",
+    "professor": {
+      "nome": "Diego Ari Ligia",
+      "matricula": 2910004
+    },
+    "turma": "INFULL4P",
+    "data": "23/01/2003",
+    "questoes": {
+      "questao": [
+        {
+        "enunciado": "O que significa HTML?",
+        "pontuacao": 2,
+        "alternativas": {
+            "alternativa": [
+              {
+                "correta": "nao",
+                "texto": "Hyper Trainer Marking Language"
+              },
+              {
+                "correta": "sim",
+                "texto": "Hyper Text Markup Language"
+              },
+              {
+                "correta": "nao",
+                "texto": "High Text Machine Language"
+              },
+              {
+                "correta": "nao",
+                "texto": "Hyper Tool Multi Language"
+              }
+            ]
+          }
+        },
+        {
+        "enunciado": "Qual linguagem é usada para estilizar páginas web?",
+        "pontuacao": 2,
+        "alternativas": {
+            "alternativa": [
+              {
+                "correta": "nao",
+                "texto": "HTML"
+              },
+              {
+                "correta": "sim",
+                "texto": "CSS"
+              },
+              {
+                "correta": "nao",
+                "texto": "Python"
+              },
+              {
+                "correta": "nao",
+                "texto": "Java"
+              }
+            ]
+          }
+        },
+        {
+        "enunciado": "Qual destas é uma linguagem de programação?",
+        "pontuacao": 2,
+        "alternativas": {
+            "alternativa": [
+              {
+                "correta": "nao",
+                "texto": "CSS"
+              },
+              {
+                "correta": "nao",
+                "texto": "HTML"
+              },
+              {
+                "correta": "sim",
+                "texto": "JavaScript"
+              },
+              {
+                "correta": "nao",
+                "texto": "XML"
+              }
+            ]
+          }
+        },
+        {
+        "enunciado": "O XML é usado principalmente para:",
+        "pontuacao": 2,
+        "alternativas": {
+            "alternativa": [
+              {
+                "correta": "nao",
+                "texto": "Estilizar páginas"
+              },
+              {
+                "correta": "sim",
+                "texto": "Armazenar e transportar dados"
+              },
+              {
+                "correta": "nao",
+                "texto": "Criar jogos"
+              },
+              {
+                "correta": "nao",
+                "texto": "Compilar código"
+              }
+            ]
+          }
+        },
+        {
+        "enunciado": "Qual é o maior planeta do sistema solar?",
+        "pontuacao": 2,
+        "alternativas": {
+            "alternativa": [
+              {
+                "correta": "nao",
+                "texto": "Terra"
+              },
+              {
+                "correta": "nao",
+                "texto": "Marte"
+              },
+              {
+                "correta": "sim",
+                "texto": "Júpiter"
+              },
+              {
+                "correta": "nao",
+                "texto": "Vênus"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

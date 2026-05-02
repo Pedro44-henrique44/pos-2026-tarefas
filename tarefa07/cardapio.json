@@ -1,0 +1,71 @@
+{
+    "cardapio":
+    [
+        {"prato": 
+            [
+                {
+                "ID":  "01",
+                "nome_prato": "Risoto",
+                "descricao": "Gostoso",
+                "ingredientes": ["macarrão", "molhos"],
+                "preco": 39.89,
+                "calorias": 300,
+                "tempo_preparo": "30 minutos"
+                }
+            ]
+        },
+        {"prato":
+            [
+                {
+                "ID": "02",
+                "nome_prato": "Feijoada",
+                "descricao": "Bom nos Domingos",
+                "ingredientes": ["Feijão preto", "Água", "sal"],
+                "preco": 56.87,
+                "calorias": 1700,
+                "tempo_preparo": "90 minutos"
+                }
+            ]
+        },
+
+        {"prato":
+            [
+                {
+                "ID": "03",
+                "nome_prato": "Risoto Aprimorado",
+                "descricao": "Ainda mais gostoso",
+                "ingredientes": ["arroz arbóreo", "caldo", "queijo"],
+                "preco": 39.89,
+                "calorias": 300,
+                "tempo_preparo": "30 minutos"
+                }
+            ]    
+        }, 
+        {"prato":  
+            [    
+                {
+                "ID": "04",
+                "nome_prato": "Hambúrguer",
+                "descricao": "Clássico",
+                "ingredientes": ["pão", "carne", "queijo", "alface"],
+                "preco": 25.00,
+                "calorias": 550,
+                "tempo_preparo": "20 minutos"
+                }
+            ]
+        },
+        {"prato":
+            [
+                {
+                "ID": "05",
+                "nome_prato": "Salada Caesar",
+                "descricao": "Leve e fresca",
+                "ingredientes": ["alface", "frango", "croutons", "molho"],
+                "preco": 22.50,
+                "calorias": 250,
+                "tempo_preparo": "15 minutos"
+                }
+            ]
+        }       
+    ]
+}
