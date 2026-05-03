@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<cardapio>
+
+    <prato ID="01">
+        <nome_prato>Risoto</nome_prato>
+        
+        <descricao>Gostoso</descricao>
+
+        <ingredientes>
+            <ingrediente>macarrão</ingrediente>
+            <ingrediente>molhos</ingrediente>
+        </ingredientes>
+
+        <preco>39.89</preco>
+
+        <calorias>300</calorias>
+        
+        <tempo_preparo>30 minutos</tempo_preparo>
+    </prato>
+
+    <prato ID="02">
+        <nome_prato>Feijoada</nome_prato>
+        
+        <descricao>Bom nos domingos</descricao>
+
+        <ingredientes>
+            <ingrediente>Feijão preto</ingrediente>
+            <ingrediente>água</ingrediente>
+            <ingrediente>sal</ingrediente>
+        </ingredientes>
+
+        <preco>56.87</preco>
+
+        <calorias>1070</calorias>
+        
+        <tempo_preparo>90 minutos</tempo_preparo>
+    </prato>
+
+    <prato ID="03">
+        <nome_prato>Risoto Aprimorado</nome_prato>
+        
+        <descricao>Ainda mais gostoso</descricao>
+
+        <ingredientes> 
+            <ingrediente>arroz arbóreo</ingrediente>
+            <ingrediente>caldo</ingrediente>
+            <ingrediente>queijo</ingrediente>
+        </ingredientes>
+
+        <preco>39.89</preco>
+
+        <calorias>300</calorias>
+        
+        <tempo_preparo>30 minutos</tempo_preparo>
+    </prato>
+
+    <prato ID="04">
+        <nome_prato>Hambúrguer</nome_prato>
+        
+        <descricao>Clássico</descricao>
+
+        <ingredientes> 
+            <ingrediente>pão</ingrediente>
+            <ingrediente>carne</ingrediente>
+            <ingrediente>queijo</ingrediente>
+            <ingrediente>alface</ingrediente>
+        </ingredientes>
+
+        <preco>25.00</preco>
+
+        <calorias>550</calorias>
+        
+        <tempo_preparo>20 minutos</tempo_preparo>
+    </prato>
+
+    <prato ID="05">
+        <nome_prato>Salada Caesar</nome_prato>
+        
+        <descricao>Leve e fresca</descricao>
+
+        <ingredientes> 
+            <ingrediente>alface</ingrediente>
+            <ingrediente>frango</ingrediente>
+            <ingrediente>croutons</ingrediente>
+            <ingrediente>molho</ingrediente>
+        </ingredientes>
+
+        <preco>22.50</preco>
+
+        <calorias>250</calorias>
+        
+        <tempo_preparo>15 minutos</tempo_preparo>
+    </prato>
+</cardapio>
