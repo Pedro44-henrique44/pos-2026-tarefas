@@ -1,0 +1,120 @@
+{
+    "imobiliaria": {
+        "imovel": [
+            {
+                "ID": "01",
+                "descricao": "Casa simples com quintal",
+                "proprietario": {
+                    "nome": "João Silva",
+                    "telefone": [
+                        "83999990001"
+                    ],
+                    "email": "JSemail@gmail.com"
+                },
+                "endereco": {
+                    "rua": "Rua das Flores",
+                    "bairro": "Centro",
+                    "cidade": "Campina Grande",
+                    "numero": 120
+                },
+                "caracteristicas": {
+                    "numBanheiros": 1,
+                    "numQuartos": 2,
+                    "tamanho": 80
+                },
+                "valor": 150000
+            },
+            {
+                "ID": "02",
+                "descricao": "Apartamento pequeno",
+                "proprietario": {
+                    "nome": "Maria Souza",
+                    "telefone": [
+                        "83999990002",
+                        "83999990012"
+                    ],
+                    "email": "Marial@gmail.com"
+                },
+                "endereco": {
+                    "rua": "Rua João Pessoa",
+                    "bairro": "Prata",
+                    "cidade": "Campina Grande",
+                    "numero": 45
+                },
+                "caracteristicas": {
+                    "numBanheiros": 1,
+                    "numQuartos": 1,
+                    "tamanho": 50
+                },
+                "valor": 120000
+            },
+            {
+                "ID": "03",
+                "descricao": "Casa ampla com garagem",
+                "proprietario": {
+                    "nome": "Carlos Pereira",
+                    "telefone": [
+                        "8377770003"
+                    ]
+                },
+                "endereco": {
+                    "rua": "Rua do Sol",
+                    "bairro": "Catolé",
+                    "cidade": "Campina Grande",
+                    "numero": 300
+                },
+                "caracteristicas": {
+                    "numBanheiros": 2,
+                    "numQuartos": 3,
+                    "tamanho": 120
+                },
+                "valor": 250000
+            },
+            {
+                "ID": "04",
+                "descricao": "Kitnet mobiliada",
+                "proprietario": {
+                    "nome": "Ana Costa",
+                    "telefone": [
+                        "8377770004"
+                    ],
+                    "email": "ana@gmail.com"
+                },
+                "endereco": {
+                    "rua": "Rua da paz",
+                    "bairro": "Liberdade",
+                    "cidade": "Campina Grande",
+                    "numero": 78
+                },
+                "caracteristicas": {
+                    "numBanheiros": 1,
+                    "numQuartos": 1,
+                    "tamanho": 35
+                },
+                "valor": 90000
+            },
+            {
+                "ID": "05",
+                "descricao": "Casa duplex moderna",
+                "proprietario": {
+                    "nome": "Pedro Alves",
+                    "telefone": [
+                        "8355550005"
+                    ],
+                    "email": "pedro@gmail.com"
+                },
+                "endereco": {
+                    "rua": "Avenida Brasil",
+                    "bairro": "Alto Branco",
+                    "cidade": "Campina Grande"
+                },
+                "caracteristicas": {
+                    "numBanheiros": 3,
+                    "numQuartos": 4,
+                    "tamanho": 185
+                },
+                "valor": 350000
+            }
+        ]
+    }
+}
