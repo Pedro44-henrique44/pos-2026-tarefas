@@ -1,15 +1,64 @@
 {% extends 'base.html' %}
 
+{% block title %}Perfil - Cliente SUAP{% endblock %}
+
 {% block content %}
-    <h2>{% block title %} {{ user_data['nome_usual'] }} {% endblock %}</h2>
-    <img src="{{ user_data['url_foto_150x200'] }}" alt="foto">
+  {% set nome = user_data.get('nome_usual') or user_data.get('nome') or 'Usuario' %}
+  {% set foto = user_data.get('url_foto_150x200') or user_data.get('url_foto_75x100') %}
+  {% set student = student_data if student_data is defined else {} %}
+  {% set campos_principais = [
+    ('Nome usual', user_data.get('nome_usual')),
+    ('Nome completo', user_data.get('nome')),
+    ('Matricula', user_data.get('matricula') or user_data.get('identificacao')),
+    ('Vinculo', user_data.get('tipo_vinculo') or user_data.get('vinculo')),
+    ('Curso', student.get('curso') or user_data.get('curso')),
+    ('Situacao academica', student.get('situacao')),
+    ('IRA', student.get('ira')),
+    ('Periodo referencia', student.get('periodo_referencia')),
+    ('Matriz', student.get('matriz')),
+    ('Ingresso', student.get('ingresso')),
+    ('Email academico', student.get('email_academico')),
+    ('Email escolar', student.get('email_escolar')),
+    ('Email', user_data.get('email')),
+    ('CPF', student.get('cpf') or user_data.get('cpf'))
+  ] %}
 
-    {% for field in user_data %}
+  <header class="page-header">
+    <p class="eyebrow">Perfil do usuario</p>
+    <h1>{{ nome }}</h1>
+    <p class="subtitle">Informacoes principais retornadas pela API do SUAP.</p>
+  </header>
 
-    <p> <b>{{ field }}</b>: {{ user_data[field] }} </p>
+  <section class="profile-grid">
+    <aside class="card photo-card">
+      {% if foto %}
+        <img src="{{ foto }}" alt="Foto de {{ nome }}">
+      {% else %}
+        <div class="empty">Foto indisponivel</div>
+      {% endif %}
 
-    {% endfor %}
+      <div class="photo-caption">
+        <h2>{{ nome }}</h2>
+        <p class="subtitle">{{ user_data.get('matricula') or user_data.get('identificacao') or 'Matricula indisponivel' }}</p>
+      </div>
+    </aside>
 
-    <p><a href="{{url_for('logout')}}">Logout</a></p>
+    <section class="card">
+      <h2>Dados principais</h2>
+      <div class="data-grid">
+        {% for rotulo, valor in campos_principais %}
+          {% if valor %}
+            <div class="data-item">
+              <span>{{ rotulo }}</span>
+              <strong>{{ valor|format_value }}</strong>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
 
+      <div class="actions">
+        <a class="button" href="{{ url_for('boletim') }}">Ver boletim</a>
+      </div>
+    </section>
+  </section>
 {% endblock %}

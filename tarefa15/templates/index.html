@@ -1,8 +1,35 @@
 {% extends 'base.html' %}
 
+{% block title %}Cliente SUAP{% endblock %}
+
 {% block content %}
-    <h2>{% block title %} Login OAuth SUAP {% endblock %}</h2>
+  <section class="hero">
+    <div>
+      <p class="eyebrow">Tarefa 15</p>
+      <h1>Cliente SUAP com Flask</h1>
+      <p class="lead">
+        Sistema cliente para autenticar no SUAP por OAuth, exibir o perfil do
+        usuario e consultar o boletim academico por ano letivo.
+      </p>
 
-    <p><a href="{{url_for('login')}}">Login</a></p>
+      <div class="actions">
+        <a class="button" href="{{ url_for('login') }}">Entrar com SUAP</a>
+      </div>
+    </div>
 
+    <ul class="feature-list">
+      <li>
+        <b>Login OAuth</b>
+        <span>Acesso conectado diretamente ao provedor SUAP.</span>
+      </li>
+      <li>
+        <b>Perfil com foto</b>
+        <span>Nome, matricula, avatar e principais informacoes do usuario.</span>
+      </li>
+      <li>
+        <b>Boletim completo</b>
+        <span>Consulta dos dados retornados pela API, com selecao de ano.</span>
+      </li>
+    </ul>
+  </section>
 {% endblock %}

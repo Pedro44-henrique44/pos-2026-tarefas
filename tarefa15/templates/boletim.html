@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block title %}Boletim - Cliente SUAP{% endblock %}
+
+{% block content %}
+  <header class="page-header">
+    <p class="eyebrow">Boletim</p>
+    <h1>Boletim academico</h1>
+    <p class="subtitle">Dados completos retornados pela API do SUAP para o ano e periodo selecionados.</p>
+  </header>
+
+  <form class="filters" method="get" action="{{ url_for('boletim') }}">
+    <div class="field">
+      <label for="ano">Ano letivo</label>
+      <select id="ano" name="ano">
+        {% for ano in anos %}
+          <option value="{{ ano }}" {% if ano == ano_letivo %}selected{% endif %}>{{ ano }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="periodo">Periodo</label>
+      <select id="periodo" name="periodo">
+        {% for periodo in periodos %}
+          <option value="{{ periodo }}" {% if periodo == periodo_letivo %}selected{% endif %}>{{ periodo }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <button class="button" type="submit">Consultar</button>
+  </form>
+
+  {% if erro %}
+    <div class="alert">Nao foi possivel carregar o boletim. Codigo retornado: {{ erro }}.</div>
+  {% endif %}
+
+  {% if periodos_letivos %}
+    <p class="subtitle">
+      Periodos encontrados:
+      {% for periodo in periodos_letivos %}
+        {{ periodo.ano_letivo }}.{{ periodo.periodo_letivo }}{% if not loop.last %}, {% endif %}
+      {% endfor %}
+    </p>
+  {% endif %}
+
+  {% if disciplinas %}
+    <section class="table-card">
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Diario</th>
+              <th>Disciplina</th>
+              <th>C.H.</th>
+              <th>C.H. cumprida</th>
+              <th>Faltas</th>
+              <th>Frequencia</th>
+              <th>N1</th>
+              <th>N2</th>
+              <th>N3</th>
+              <th>N4</th>
+              <th>Media</th>
+              <th>Final</th>
+              <th>Media final</th>
+              <th>Situacao</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for disciplina in disciplinas %}
+              {% set n1 = disciplina.get('nota_etapa_1') or {} %}
+              {% set n2 = disciplina.get('nota_etapa_2') or {} %}
+              {% set n3 = disciplina.get('nota_etapa_3') or {} %}
+              {% set n4 = disciplina.get('nota_etapa_4') or {} %}
+              {% set nf = disciplina.get('nota_avaliacao_final') or {} %}
+              <tr>
+                <td>{{ disciplina.get('codigo_diario')|format_value }}</td>
+                <td class="subject">{{ disciplina.get('disciplina')|format_value }}</td>
+                <td>{{ disciplina.get('carga_horaria')|format_value }}</td>
+                <td>{{ disciplina.get('carga_horaria_cumprida')|format_value }}</td>
+                <td>{{ disciplina.get('numero_faltas')|format_value }}</td>
+                <td>{{ disciplina.get('percentual_carga_horaria_frequentada')|format_value }}%</td>
+                <td class="grade">
+                  <strong>{{ n1.get('nota')|format_value }}</strong>
+                  <span>faltas: {{ n1.get('faltas')|format_value }}</span>
+                </td>
+                <td class="grade">
+                  <strong>{{ n2.get('nota')|format_value }}</strong>
+                  <span>faltas: {{ n2.get('faltas')|format_value }}</span>
+                </td>
+                <td class="grade">
+                  <strong>{{ n3.get('nota')|format_value }}</strong>
+                  <span>faltas: {{ n3.get('faltas')|format_value }}</span>
+                </td>
+                <td class="grade">
+                  <strong>{{ n4.get('nota')|format_value }}</strong>
+                  <span>faltas: {{ n4.get('faltas')|format_value }}</span>
+                </td>
+                <td class="grade">
+                  <strong>{{ disciplina.get('media_disciplina')|format_value }}</strong>
+                </td>
+                <td class="grade">
+                  <strong>{{ nf.get('nota')|format_value }}</strong>
+                  <span>faltas: {{ nf.get('faltas')|format_value }}</span>
+                </td>
+                <td class="grade">
+                  <strong>{{ disciplina.get('media_final_disciplina')|format_value }}</strong>
+                </td>
+                <td><span class="status">{{ disciplina.get('situacao')|format_value }}</span></td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  {% else %}
+    <div class="empty">Nenhum dado de boletim encontrado para {{ ano_letivo }}.{{ periodo_letivo }}.</div>
+  {% endif %}
+{% endblock %}
